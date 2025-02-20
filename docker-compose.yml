@@ -9,7 +9,7 @@ services:
     ports:
       - "7000:5173"
     volumes:
-      - ./my-data:/app/data
+      - ./my-data:/app/data #Persist volume data
     environment:
       - PORT=5173
     command: ["npm", "run", "preview", "--", "--port", "5173", "--host"] 
