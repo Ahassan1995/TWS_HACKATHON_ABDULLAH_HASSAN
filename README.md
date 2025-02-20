@@ -14,6 +14,8 @@
 
 ```sh
    npm install
+   npm run dev
+
 ```
 
 ## Creating a user who can only edit files but can't run the project
