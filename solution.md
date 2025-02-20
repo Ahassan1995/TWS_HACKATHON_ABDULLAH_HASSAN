@@ -140,7 +140,7 @@
    sudo find /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN -type d -exec chmod 770 {} ;
    sudo find /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN -type f -exec chmod 660 {} ;
 ```
-   "Run this command after you run npm install"
+4. Run this command after you run npm install
    
 ```sh
    sudo chmod 750 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/node_modules/.bin/vite
@@ -149,13 +149,13 @@
 
 ```
 
-4. Further restrict access to the project’s `dev` script:
+5. Further restrict access to the project’s `dev` script:
 ```sh
    sudo chmod -R 750 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN
    sudo chown ubuntu:dev /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/package.json
    sudo chmod 640 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/package.json
 ```
-5. Now, `dev` can access the system but cannot execute `npm` commands to run the project.
+6. Now, `dev` can access the system but cannot execute `npm` commands to run the project.
 
     ![Image](https://github.com/user-attachments/assets/067cf14a-87b4-4718-bef5-31c07c14b6be)
 
