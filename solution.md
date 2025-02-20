@@ -3,7 +3,7 @@
 ## Cloning the Project and Running via npm
 
 1. Clone the project repository:
-   ```sh
+```sh
    git clone https://github.com/Ahassan1995/TWS_HACKATHON_ABDULLAH_HASSAN.git
 ```markdown
 # Linux Part
@@ -27,23 +27,23 @@
 ```sh
    sudo passwd dev
 ```
- ```sh
+```sh
    sudo chown -R ubuntu:editors /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN
    sudo find /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN -type d -exec chmod 770 {} ;
    sudo find /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN -type f -exec chmod 660 {} ;
-   ```
+```
    "Run this command after you run npm install"
    
-   ```sh
+```sh
    sudo chmod 750 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/node_modules/.bin/vite
    sudo chmod 750 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/package.json
    sudo chmod 750 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/package-lock.json
-   ```
+```
  ```sh
    sudo chmod -R 750 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN
    sudo chown ubuntu:dev /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/package.json
    sudo chmod 640 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/package.json
-   ```
+```
 
 # Solution for Git and Docker
 
