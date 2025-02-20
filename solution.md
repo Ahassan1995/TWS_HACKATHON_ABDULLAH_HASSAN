@@ -11,17 +11,17 @@
 ## Cloning the Project and Running via npm
 
 1. Clone the project repository:
-   ```sh
+```sh
    git clone https://github.com/Ahassan1995/TWS_HACKATHON_ABDULLAH_HASSAN.git
-   ```
+```
+
 2. Navigate into the project directory:
 ```sh
    cd TWS_HACKATHON_ABDULLAH_HASSAN
 ```
- ```sh
+```sh
    npm install
-   ```
- ```
+```
 
 2. Set a password for the new user:
 ```sh
