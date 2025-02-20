@@ -6,16 +6,19 @@
 ```sh
    git clone https://github.com/Ahassan1995/TWS_HACKATHON_ABDULLAH_HASSAN.git
 ```
-
 2. Navigate into the project directory:
+
 ```sh
    cd TWS_HACKATHON_ABDULLAH_HASSAN
 ```
+
 ```sh
    npm install
 ```
 
+
 2. Set a password for the new user:
+
 ```sh
    sudo passwd dev
 ```
@@ -24,6 +27,7 @@
    sudo find /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN -type d -exec chmod 770 {} ;
    sudo find /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN -type f -exec chmod 660 {} ;
 ```
+
    "Run this command after you run npm install"
    
 ```sh
@@ -31,7 +35,8 @@
    sudo chmod 750 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/package.json
    sudo chmod 750 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/package-lock.json
 ```
- ```sh
+
+```sh
    sudo chmod -R 750 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN
    sudo chown ubuntu:dev /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/package.json
    sudo chmod 640 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/package.json
@@ -42,6 +47,7 @@
 ## Git: Creating a Separate Branch for Updating Footer
 
 1. Clone the project repository if not already done:
+
 ```sh
    git clone https://github.com/Ahassan1995/TWS_HACKATHON_ABDULLAH_HASSAN.git
    cd TWS_HACKATHON_ABDULLAH_HASSAN
