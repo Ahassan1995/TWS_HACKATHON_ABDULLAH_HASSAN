@@ -5,7 +5,7 @@
 1. Clone the project repository:
 ```sh
    git clone https://github.com/Ahassan1995/TWS_HACKATHON_ABDULLAH_HASSAN.git
-```markdown
+```
 # Linux Part
 
 ## Cloning the Project and Running via npm
