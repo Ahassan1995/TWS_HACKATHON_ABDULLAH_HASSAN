@@ -155,9 +155,7 @@
    sudo chown ubuntu:dev /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/package.json
    sudo chmod 640 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/package.json
 ```
-
-
-Now, `dev` can access the system but cannot execute `npm` commands to run the project.
+5. Now, `dev` can access the system but cannot execute `npm` commands to run the project.
 
     ![Image](https://github.com/user-attachments/assets/067cf14a-87b4-4718-bef5-31c07c14b6be)
 
