@@ -16,8 +16,9 @@
    npm install
 ```
 
+## Creating a user who can only edit files but can't run the project
 
-2. Set a password for the new user:
+1. Set a password for the new user:
 
 ```sh
    sudo passwd dev
@@ -40,72 +41,6 @@
    sudo chmod -R 750 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN
    sudo chown ubuntu:dev /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/package.json
    sudo chmod 640 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/package.json
-```
-
-# Solution for Git and Docker
-
-## Git: Creating a Separate Branch for Updating Footer
-
-1. Clone the project repository if not already done:
-
-```sh
-   git clone https://github.com/Ahassan1995/TWS_HACKATHON_ABDULLAH_HASSAN.git
-   cd TWS_HACKATHON_ABDULLAH_HASSAN
-```
-
-2. Push the branch to GitLab:
-```sh
-   git push origin author-name-change
-```
-
-3. Create or modify the `Dockerfile` to use multi-stage builds.
-
-4. Commit and push the changes:
-```sh
-   git add .
-   git commit -m "Implemented multi-stage Dockerfile for optimized build"
-   git push origin multi-stage-docker
-```
-
-## Converting to Docker-Compose File
-
-1. Create a new branch:
-```sh
-   git switch -c docker-compose
-```
- ```sh
-   git add docker-compose.yml
-   git commit -m "Added Docker Compose file"
-   git push origin docker-compose
-```
-
-## Creating Persisting Volume For Docker Container
-
-1. Create a Docker Volume:
-```sh
-   docker volume create my-data
-```
- ```sh
-   docker run -d --name my-container -p 5000:5173 -v my-data:/app/data multi-stage-image npm run preview -- --port 5173 --host
-```
-
-4. Access the Container and Verify Data Persistence:
-```sh
-   docker exec -it my-container sh
-   cd /data
-   echo "Persistent storage test" > testfile.txt
-   exit
-```
-
-   Remove the container:
-```sh
-   docker rm -f my-container
-```
-
-   Run a new container and verify data persistence:
-```sh
-   docker run -d --name my-container -p 5000:5173 -v my-data:/app/data multi-stage-image npm run preview -- --port 5173 --host
-   docker exec my-container ls /data
 ```
 2. Navigate into the project directory:
 ```sh
