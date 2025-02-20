@@ -6,14 +6,6 @@
 ```sh
    git clone https://github.com/Ahassan1995/TWS_HACKATHON_ABDULLAH_HASSAN.git
 ```
-# Linux Part
-
-## Cloning the Project and Running via npm
-
-1. Clone the project repository:
-```sh
-   git clone https://github.com/Ahassan1995/TWS_HACKATHON_ABDULLAH_HASSAN.git
-```
 
 2. Navigate into the project directory:
 ```sh
