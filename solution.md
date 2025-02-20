@@ -15,18 +15,18 @@
    git clone https://github.com/Ahassan1995/TWS_HACKATHON_ABDULLAH_HASSAN.git
    ```
 2. Navigate into the project directory:
-   ```sh
+```sh
    cd TWS_HACKATHON_ABDULLAH_HASSAN
-   ```
+```
  ```sh
    npm install
    ```
  ```
 
 2. Set a password for the new user:
-   ```sh
+```sh
    sudo passwd dev
-   ```
+```
  ```sh
    sudo chown -R ubuntu:editors /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN
    sudo find /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN -type d -exec chmod 770 {} ;
@@ -50,113 +50,113 @@
 ## Git: Creating a Separate Branch for Updating Footer
 
 1. Clone the project repository if not already done:
-   ```sh
+```sh
    git clone https://github.com/Ahassan1995/TWS_HACKATHON_ABDULLAH_HASSAN.git
    cd TWS_HACKATHON_ABDULLAH_HASSAN
-   ```
- ```
-5. Push the branch to GitLab:
-   ```sh
-   git push origin author-name-change
-   ```
- ```
-2. Create or modify the `Dockerfile` to use multi-stage builds.
+```
 
-3. Commit and push the changes:
-   ```sh
+2. Push the branch to GitLab:
+```sh
+   git push origin author-name-change
+```
+
+3. Create or modify the `Dockerfile` to use multi-stage builds.
+
+4. Commit and push the changes:
+```sh
    git add .
    git commit -m "Implemented multi-stage Dockerfile for optimized build"
    git push origin multi-stage-docker
-   ```
+```
 
 ## Converting to Docker-Compose File
 
 1. Create a new branch:
-   ```sh
+```sh
    git switch -c docker-compose
-   ```
+```
  ```sh
    git add docker-compose.yml
    git commit -m "Added Docker Compose file"
    git push origin docker-compose
-   ```
+```
 
 ## Creating Persisting Volume For Docker Container
 
 1. Create a Docker Volume:
-   ```sh
+```sh
    docker volume create my-data
-   ```
+```
  ```sh
    docker run -d --name my-container -p 5000:5173 -v my-data:/app/data multi-stage-image npm run preview -- --port 5173 --host
-   ```
+```
 
 4. Access the Container and Verify Data Persistence:
-   ```sh
+```sh
    docker exec -it my-container sh
    cd /data
    echo "Persistent storage test" > testfile.txt
    exit
-   ```
+```
 
    Remove the container:
-   ```sh
+```sh
    docker rm -f my-container
-   ```
+```
 
    Run a new container and verify data persistence:
-   ```sh
+```sh
    docker run -d --name my-container -p 5000:5173 -v my-data:/app/data multi-stage-image npm run preview -- --port 5173 --host
    docker exec my-container ls /data
-   ```
+```
 2. Navigate into the project directory:
-   ```sh
+```sh
    cd TWS_HACKATHON_ABDULLAH_HASSAN
-   ```
+```
 3. Install dependencies:
-   ```sh
+```sh
    npm install
-   ```
+```
 4. Run the project:
-   ```sh
+```sh
    npm run dev
-   ```
+```
 
 ## Creating a User and Restricting npm Execution
 
 1. Create a new user:
-   ```sh
+```sh
    sudo adduser dev
    sudo groupadd editors
    sudo usermod -aG editors dev
-   ```
+```
 
 2. Set a password for the new user:
-   ```sh
+```sh
    sudo passwd dev
-   ```
+```
 
 3. Restrict execution of `npm` for the user:
-   ```sh
+```sh
    sudo chown -R ubuntu:editors /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN
    sudo find /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN -type d -exec chmod 770 {} ;
    sudo find /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN -type f -exec chmod 660 {} ;
-   ```
+```
    "Run this command after you run npm install"
    
-   ```sh
+```sh
    sudo chmod 750 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/node_modules/.bin/vite
    sudo chmod 750 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/package.json
    sudo chmod 750 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/package-lock.json
 
-   ```
+```
 
 4. Further restrict access to the project’s `dev` script:
-   ```sh
+```sh
    sudo chmod -R 750 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN
    sudo chown ubuntu:dev /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/package.json
    sudo chmod 640 /home/ubuntu/TWS_HACKATHON_ABDULLAH_HASSAN/package.json
-   ```
+```
 
 
 Now, `dev` can access the system but cannot execute `npm` commands to run the project.
@@ -169,31 +169,31 @@ Now, `dev` can access the system but cannot execute `npm` commands to run the pr
 ## Git: Creating a Separate Branch for Updating Footer
 
 1. Clone the project repository if not already done:
-   ```sh
+```sh
    git clone https://github.com/Ahassan1995/TWS_HACKATHON_ABDULLAH_HASSAN.git
    cd TWS_HACKATHON_ABDULLAH_HASSAN
-   ```
+```
 2. Create a new branch for modifying `Footer.jsx`:
-   ```sh
+```sh
    git switch -c author-name-change
-   ```
+```
 3. Open `Footer.jsx` and `index.html` in an editor and change the address and author details respectively.
 4. Commit the changes:
-   ```sh
+```sh
    git add src/components/Footer.jsx
    git commit -m "your message"
-   ```
+```
 5. Push the branch to GitLab:
-   ```sh
+```sh
    git push origin author-name-change
-   ```
+```
 
 ## Git: Creating a Separate Branch for Multi-Stage Dockerfile
 
 1. Create a new branch for Docker changes:
-   ```sh
+```sh
    git switch -c multi-stage-docker
-   ```
+```
 2. Create or modify the `Dockerfile` to use multi-stage builds.
 
 3. Using multip stage image to reduce the size of an image as you can see below:
@@ -202,28 +202,28 @@ Now, `dev` can access the system but cannot execute `npm` commands to run the pr
 
 4. Commit and push the changes:
 
-   ```sh
+```sh
    git add .
    git commit -m "Your Message"
    git push origin multi-stage-docker
-   ```
+```
 
 ## Converting to Docker-Compose File
 
 1. Create a new branch:
 
-   ```sh
+```sh
    git switch -c docker-compose
-   ```
+```
 2. Create a `docker-compose.yml` file and write a content in it
    
 3. Commit and push the changes:
 
-   ```sh
+```sh
    git add docker-compose.yml
    git commit -m "Added Docker Compose file"
    git push origin docker-compose
-   ```
+```
 
 Now, there are three separate branches for different tasks: `update-footer`, `multi-stage-docker`, and `docker-compose` and in the end Merge it in a Main branch.
 
